@@ -8,7 +8,7 @@ module Capistrano
       end
 
       def db_path
-        return Pathname.new(databse_location())
+        return Pathname.new(database_location())
       end
 
       def db_linked_path
