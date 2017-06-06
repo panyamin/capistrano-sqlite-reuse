@@ -1,5 +1,4 @@
 require "pathname"
-require "yml"
 
 module Capistrano
   module SqliteReuse

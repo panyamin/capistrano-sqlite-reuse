@@ -1,3 +1,5 @@
+require "yaml"
+
 module Capistrano
   module SqliteReuse
     module Helpers
