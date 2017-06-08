@@ -33,7 +33,7 @@ namespace :sqlite_reuse do
       if ((false == db_current_exists) && (false == db_linked_exists))
         next
       else
-        if (true == db_current_exists)
+        if (false == db_linked_exists)
           if (false == test("[ -d #{db_linked_dir} ]"))
             execute(:mkdir, db_linked_dir)
           end
