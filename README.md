@@ -19,7 +19,7 @@ And then:
 
 - add to `Capfile`:
 
-        require 'capistrano/sqlite-reuse'
+        require 'capistrano/sqlite_reuse'
 
 You can now proceed with other deployment tasks.
 
