@@ -5,7 +5,11 @@ module Capistrano
     module Helpers
       def local_database_yml(env = fetch(:rails_env))
         env = env.to_s
-        @local_database_yml ||= YAML.load_file(database_yml_local_path)
+        @local_database_yml ||= begin
+          YAML.load_file(database_yml_local_path, aliases: true)
+        rescue ArgumentError
+          YAML.load_file(database_yml_local_path)
+        end
 
         return @local_database_yml[env]
       end
